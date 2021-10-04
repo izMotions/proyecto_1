@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <!--LLAMANDO EL ELEMENTO CON UN FOR DE CICLO-->
+    <!--routerLink es un redireccional = url = vinculo-->
+
+    <ion-item *ngFor="let p of productos"[routerLink]="['/home']"> 
+      <ion-avatar slot="start">
+        <ion-img [src]="p.imagenURL"></ion-img>
+      </ion-avatar>
+
+      <ion-label>{{ p.nombre }}</ion-label>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
