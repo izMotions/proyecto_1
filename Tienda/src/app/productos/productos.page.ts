@@ -11,6 +11,7 @@ import {Router} from '@angular/router';//enrutar
 export class ProductosPage implements OnInit {
 
   private productos = []
+  usuario = localStorage.getItem("datosUsuario")
 
 
   //el constructor utiliza el servicio y este servicio ahora es parte del html

@@ -1,17 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>productos</ion-title>
+    <ion-title class="testeo">productos | Bienvenido {{usuario}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="fondo">
 
-  <ion-list>
+  <ion-list >
     <!--LLAMANDO EL ELEMENTO CON UN FOR DE CICLO-->
     <!--routerLink es un redireccional = url = vinculo-->
     <!--la vaiable P = productos-->
 
-    <ion-item *ngFor="let p of productos"[routerLink]="['/productos', p.id]"> 
+    <ion-item class="testeo" *ngFor="let p of productos"[routerLink]="['/productos', p.id]"> 
       <ion-avatar slot="start">
         <ion-img [src]="p.imagenURL"></ion-img>
       </ion-avatar>

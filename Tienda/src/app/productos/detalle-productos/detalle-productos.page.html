@@ -1,13 +1,13 @@
 <ion-header>
-  <ion-toolbar color = "tertiary">
+  <ion-toolbar color = "light">
   <ion-button slot = "start">
     <ion-back-button></ion-back-button>
   </ion-button>
-  <ion-title>{{datos.nombre}}</ion-title>
+  <ion-title class="testeo">{{datos.nombre}}</ion-title>
 
   <ion-button slot = "end">
     <ion-button (click) = "eliminar()">
-      <ion-icon name="trash-outline"></ion-icon>
+      <ion-icon class="testeo" name="trash-outline"></ion-icon>
     </ion-button>
   </ion-button>
 
@@ -42,7 +42,7 @@
           </ion-item>
         </ion-list>
 
-        <!--ngTemplates : es un segemento de codigo que apaece bajo una condicion-->
+        <!--ngTemplates : es un segemento de codigo que aparece bajo una condicion-->
         <ng-template #sinComentarios>
           <ion-text>
             <p class="ion-text-center">Sin comentarios</p>
