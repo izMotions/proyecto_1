@@ -8,12 +8,34 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login', //aqui se define la ruta principal
     pathMatch: 'full'
   },
   {
     path: 'productos',
-    loadChildren: () => import('./productos/productos.module').then( m => m.ProductosPageModule)
+    children:[
+      {
+        path:"",
+        loadChildren: () => import('./productos/productos.module').then( m => m.ProductosPageModule)
+    },
+    { //p= producto 
+      path: ":pID",
+      loadChildren:() => import('./productos/detalle-productos/detalle-productos.module').then(m => m.DetalleProductosPageModule)
+
+    }
+
+
+   
+     ]
+  },
+  {
+    path: 'agregar-producto',
+    loadChildren:() => import('./productos/agregar-producto/agregar-producto.module').then( m => m.AgregarProductoPageModule )
+
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
 ];
 

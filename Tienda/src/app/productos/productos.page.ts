@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+//importamos la clase del servicio
+import {ProductosService} from './productos.service';
+import {Router} from '@angular/router';//enrutar 
 
 @Component({
   selector: 'app-productos',
@@ -7,28 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductosPage implements OnInit {
 
-  private productos = [
-    {
-      id : '1',
-      nombre : 'testeo',
-      imagenURL : 'http://www.missingnumber.com.mx/wp-content/uploads/2017/05/MegaMan-Figuras-2.jpg',
-      //SE PUEDE CREAR UNA LISTA DE COMENTARIO AGREGANDO UN []
-      comentarios : ['comentario de testeo 1', 'lista de comentario 2']
-    },
-    //ALT + SHIFT + ABAJO PARA COPIAR TODO Y PEGARLO
-    {
-      id : '1',
-      nombre : 'testeo',
-      imagenURL : 'http://www.missingnumber.com.mx/wp-content/uploads/2017/05/MegaMan-Figuras-2.jpg',
-      comentarios : ['comentario de testeo 1', 'lista de comentario 2']
-    },
+  private productos = []
 
 
-  ]
-
-  constructor() { }
+  //el constructor utiliza el servicio y este servicio ahora es parte del html
+  constructor(private servicioProductos: ProductosService , private router : Router) { }
 
   ngOnInit() {
+    //recuperar todos los productos
+    this.productos = this.servicioProductos.getProductos();
+  }
+
+  ionViewWillEnter(){
+    this.productos = this.servicioProductos.getProductos();
+  }
+
+  //metodo que redirecciona a la pagina de agregar
+  redireccionarAgregar(){
+    console.log('funciona');
+    this.router.navigate(['/agregar-producto']);
+
   }
 
 }
