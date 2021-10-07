@@ -16,7 +16,8 @@
           <ion-input type="text" placeholder="Ingrese el nombre" #nombre ></ion-input>
           <ion-input type="text" placeholder="Ingrese la URL de la imagen" #url ></ion-input>
           <ion-input type="text" placeholder="Ingrese un comentario" #comentario ></ion-input>
-          <ion-button color="warning" (click)="agregarProducto(nombre,url,comentario)"> Agregar</ion-button>
+          <ion-input type="number" placeholder="Ingrese precio" #precios ></ion-input>
+          <ion-button color="warning" (click)="agregarProducto(nombre,url,comentario,precios)"> Agregar</ion-button>
         </ion-card-content>
       </ion-card>
 

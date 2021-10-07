@@ -15,7 +15,7 @@ export class AgregarProductoPage implements OnInit {
   }
 
   //metodo para agregar
-  agregarProducto(nombre,url,comentario){
+  agregarProducto(nombre,url,comentario,precios){
 
     var lista = []
 
@@ -27,7 +27,7 @@ export class AgregarProductoPage implements OnInit {
     }
 
 
-    this.productoServicio.addProductos(nombre.value,url.value,lista);
+    this.productoServicio.addProductos(nombre.value,url.value,lista,precios.value);
     this.router.navigate(['/productos'])
 
   }
