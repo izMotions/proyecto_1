@@ -8,21 +8,21 @@ export class ProductosService {
   private productos = [
     {
       id : '1',
-      nombre : 'figura omegamon',
+      nombre : 'Figura Omegamon',
       imagenURL : 'https://ae01.alicdn.com/kf/HTB19JFfetzJ8KJjSspkxh6F7VXaa/Mostrar-Z-Tienda-TungMung-EX-Omegamon-Omega-X-Digital-Monster-Figura-de-Acci-n.jpeg_Q90.jpeg_.webp',
       //SE PUEDE CREAR UNA LISTA DE COMENTARIO AGREGANDO UN []
       comentarios : [],
-      precios : 324,
+      precios : 150000,
       stock : 30
     },
     //ALT + SHIFT + ABAJO PARA COPIAR TODO Y PEGARLO
     {
       id : '2',
-      nombre : 'figura megaman x',
+      nombre : 'Figura Megaman x',
       imagenURL : 'http://www.missingnumber.com.mx/wp-content/uploads/2017/05/MegaMan-Figuras-2.jpg',
-      comentarios : ['figura del personaje  del juego megaman x', 'con dos versiones'],
+      comentarios : ['Figura del personaje del juego Megaman X', 'con dos variantes disponibles.'],
       precios : 100000,
-      stock : 10
+      stock : 20
     },
 
 
