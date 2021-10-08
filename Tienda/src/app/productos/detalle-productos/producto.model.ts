@@ -4,4 +4,5 @@ export interface Producto{
     imagenURL : string;
     comentarios : string[];
     precios : number;
+    stock : number;
 }

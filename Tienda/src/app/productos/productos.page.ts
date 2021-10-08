@@ -33,4 +33,12 @@ export class ProductosPage implements OnInit {
 
   }
 
+    //metodo que redirecciona a la pagina de agregar
+    redireccionarLogin(){
+      console.log('funciona');
+      this.router.navigate(['/login']);
+  
+    }
+  
+
 }

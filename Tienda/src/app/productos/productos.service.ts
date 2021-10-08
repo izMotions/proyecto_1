@@ -12,7 +12,8 @@ export class ProductosService {
       imagenURL : 'https://ae01.alicdn.com/kf/HTB19JFfetzJ8KJjSspkxh6F7VXaa/Mostrar-Z-Tienda-TungMung-EX-Omegamon-Omega-X-Digital-Monster-Figura-de-Acci-n.jpeg_Q90.jpeg_.webp',
       //SE PUEDE CREAR UNA LISTA DE COMENTARIO AGREGANDO UN []
       comentarios : [],
-      precios : 324
+      precios : 324,
+      stock : 30
     },
     //ALT + SHIFT + ABAJO PARA COPIAR TODO Y PEGARLO
     {
@@ -20,7 +21,8 @@ export class ProductosService {
       nombre : 'figura megaman x',
       imagenURL : 'http://www.missingnumber.com.mx/wp-content/uploads/2017/05/MegaMan-Figuras-2.jpg',
       comentarios : ['figura del personaje  del juego megaman x', 'con dos versiones'],
-      precios : 100000
+      precios : 100000,
+      stock : 10
     },
 
 
@@ -50,13 +52,14 @@ export class ProductosService {
   //nomb , imgURL son parametros que creamos nosotros, totalmente distinto a lo otro
   //agregamos un producto nuevo a la lista
   //el id corresponde al ultimo elemento registrado +1
-  addProductos(nombre : string, imagenURL : string, comentarios : string [], precios : number ){
+  addProductos(nombre : string, imagenURL : string, comentarios : string [], precios : number, stock : number ){
     this.productos.push({
       id : this.productos.length + 1 + "",
       nombre ,
       imagenURL , 
       comentarios ,
-      precios 
+      precios ,
+      stock
     });
   
 

@@ -2,9 +2,14 @@
   <ion-toolbar>
     <ion-title class="testeo">productos | Bienvenido {{usuario}}</ion-title>
   </ion-toolbar>
+  
 </ion-header>
 
+
+
 <ion-content class="fondo">
+
+  
 
   <ion-list >
     <!--LLAMANDO EL ELEMENTO CON UN FOR DE CICLO-->
@@ -28,5 +33,12 @@
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
     </ion-fab>
+
+    <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+      <ion-fab-button color="warning" (click)="redireccionarLogin()">
+        <ion-icon name="exit-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
 
 </ion-content>
